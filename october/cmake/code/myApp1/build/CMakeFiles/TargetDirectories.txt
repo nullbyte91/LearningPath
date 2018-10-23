@@ -1,0 +1,7 @@
+/home/nullbyte/Desktop/snowden/october/cmake/code/myApp1/build/CMakeFiles/install.dir
+/home/nullbyte/Desktop/snowden/october/cmake/code/myApp1/build/CMakeFiles/list_install_components.dir
+/home/nullbyte/Desktop/snowden/october/cmake/code/myApp1/build/CMakeFiles/rebuild_cache.dir
+/home/nullbyte/Desktop/snowden/october/cmake/code/myApp1/build/CMakeFiles/hello_world.dir
+/home/nullbyte/Desktop/snowden/october/cmake/code/myApp1/build/CMakeFiles/edit_cache.dir
+/home/nullbyte/Desktop/snowden/october/cmake/code/myApp1/build/CMakeFiles/install/strip.dir
+/home/nullbyte/Desktop/snowden/october/cmake/code/myApp1/build/CMakeFiles/install/local.dir
