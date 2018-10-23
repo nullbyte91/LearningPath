@@ -57,4 +57,6 @@ mkdir _build
 cd _build
 #Call Cmake
 cmake ..
+# To run the script
+make
 ```
