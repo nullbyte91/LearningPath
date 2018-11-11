@@ -66,6 +66,13 @@ Build space: /home/nullbyte/Desktop/catkin_ws/build
 Devel space: /home/nullbyte/Desktop/catkin_ws/devel
 Install space: /home/nullbyte/Desktop/catkin_ws/install
 ####
+#### Running command: "cmake /home/nullbyte/Desktop/catkin_ws/src -DCATKIN_DEVEL_PREFIX=/home/nullbyte/Desktop/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/nullbyte/Desktonullbyte@visteonPune:~/Desktop/catkin_ws$ catkin_make
+Base path: /home/nullbyte/Desktop/catkin_ws
+Source space: /home/nullbyte/Desktop/catkin_ws/src
+Build space: /home/nullbyte/Desktop/catkin_ws/build
+Devel space: /home/nullbyte/Desktop/catkin_ws/devel
+Install space: /home/nullbyte/Desktop/catkin_ws/install
+####
 #### Running command: "cmake /home/nullbyte/Desktop/catkin_ws/src -DCATKIN_DEVEL_PREFIX=/home/nullbyte/Desktop/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/nullbyte/Desktop/catkin_ws/install -G Unix Makefiles" in "/home/nullbyte/Desktop/catkin_ws/build"
 ####
 -- Using CATKIN_DEVEL_PREFIX: /home/nullbyte/Desktop/catkin_ws/devel
@@ -94,4 +101,54 @@ Install space: /home/nullbyte/Desktop/catkin_ws/install
 ####
 #### Running command: "make -j4 -l4" in "/home/nullbyte/Desktop/catkin_ws/build"
 ####
+p/catkin_ws/install -G Unix Makefiles" in "/home/nullbyte/Desktop/catkin_ws/build"
+####
+-- Using CATKIN_DEVEL_PREFIX: /home/nullbyte/Desktop/catkin_ws/devel
+-- Using CMAKE_PREFIX_PATH: /home/nullbyte/Desktop/catkin_ws/devel;/opt/ros/kinetic
+-- This workspace overlays: /home/nullbyte/Desktop/catkin_ws/devel;/opt/ros/kinetic
+-- Using PYTHON_EXECUTABLE: /usr/bin/python
+-- Using Debian Python package layout
+-- Using empy: /usr/bin/empy
+-- Using CATKIN_ENABLE_TESTING: ON
+-- Call enable_testing()
+-- Using CATKIN_TEST_RESULTS_DIR: /home/nullbyte/Desktop/catkin_ws/build/test_results
+-- Found gmock sources under '/usr/src/gmock': gmock will be built
+-- Found gtest sources under '/usr/src/gmock': gtests will be built
+-- Using Python nosetests: /usr/bin/nosetests-2.7
+-- catkin 0.7.14
+-- BUILD_SHARED_LIBS is on
+-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-- ~~  traversing 1 packages in topological order:
+-- ~~  - my_robot
+-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-- +++ processing catkin package: 'my_robot'
+-- ==> add_subdirectory(my_robot)
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/nullbyte/Desktop/catkin_ws/build
+####
+#### Running command: "make -j4 -l4" in "/home/nullbyte/Desktop/catkin_ws/build"
+####
 ```
+
+## 2.0 ROS - Nodes
+
+Its an executable that uses ROS to comunicate with other Nodes. In another word, An executable program running inside our Robot applicaton. Our application might contain many Nodes which will b put into pakages. Then, Node will communicate each other.
+
+![ROS - Node example](ROS_Nodes.png)
+
+Let say example, Camera pakage has Camera driver node, Image processing node and etc. And, These nodes will communicate through RASC Communication.
+
+RASC Communication will be used between Pakage too.
+
+Overview of ROS - Nodes:
+
+- Processes that perform computation
+- Combined into a graph
+- Communicate with each other through topics, services and parameter server.
+
+Benefits:
+
+- Reduce code complexity
+- Fault tolerance
+- Can be written in Python, C++, ..
