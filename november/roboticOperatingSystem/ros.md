@@ -152,3 +152,50 @@ Benefits:
 - Reduce code complexity
 - Fault tolerance
 - Can be written in Python, C++, ..
+
+## 2.1 Your First Python Node
+
+```python
+#makes sure your script is executed as a Python script
+#!/usr/bin/env python
+
+# Import rospy Package
+import rospy
+
+#Run as main program
+if __name__ == '__main__':
+    # It tells rospy the name of your node -- until rospy has this information
+    # It cannot start communicating with the ROS Master
+    rospy.init_node('FirstNode')
+
+    #rospy logging
+    rospy.loginfo("This node has been started")
+
+    #This line creates a Rate object rate. With the help of its method sleep()
+    # it offers a convenient way for looping at the desired rate.
+    #With its argument of 10, we should expect to go through the loop 10 times per second.
+    rate = rospy.Rate(10)
+
+    #This loop is a fairly standard rospy construct:
+    #checking the rospy.is_shutdown() flag and then doing work. You have to check
+    # is_shutdown() to check if your program should exit (e.g. if there is a Ctrl-C
+    # or otherwise)
+    while not rospy.is_shutdown():
+        rospy.loginfo("Hello")
+        rate.sleep()
+```
+
+![ROS - Node example](First_node_1.png)
+
+Now, You can check the rosnode list by executing below commands,
+
+```bash
+rosnode list
+```
+
+```bash
+console output:
+nullbyte@visteonPune:~/Desktop/catkin_ws/src/my_robot/scripts$ rosnode list
+/FirstNode
+/rosout
+```
