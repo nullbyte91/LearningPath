@@ -7,6 +7,7 @@ Topic | Link
 Machine Learning For Humans | [Medium Post](https://medium.com/machine-learning-for-humans)
 Implement Gradient Descent in Python | [Towardsdatascience post](https://towardsdatascience.com/implement-gradient-descent-in-python-9b93ed7108d1)
 Build a deep learning image dataset | [pyimagesearch](https://www.pyimagesearch.com/2018/04/09/how-to-quickly-build-a-deep-learning-image-dataset)
+Transfer Learning using Keras | [From Satya Mallick](https://www.learnopencv.com/keras-tutorial-transfer-learning-using-pre-trained-models/)
 
 ### [3Blue1Brown](https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw)
 Topic | Notes
