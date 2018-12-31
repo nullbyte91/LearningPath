@@ -49,7 +49,7 @@ Topic | Notes
 ### [Fast.ai Computational Linear Algebra](https://www.fast.ai/2017/07/17/num-lin-alg/)
 Topic | Notes
 :-- | :--: 
-[Jupyter Notebook](https://github.com/fastai/numerical-linear-algebra/blob/master/README.md) | To do 
+[Jupyter Notebook](https://github.com/fastai/numerical-linear-algebra/blob/master/README.md) | [My Notes](https://github.com/nullbyte91/LearningPath/tree/master/courses/fast.ai/computational_linear_algebra)
 [Video's](https://www.youtube.com/playlist?list=PLtmWHNX-gukIc92m1K0P6bIOnZb-mg0hY) | To do 
 
 ### Research Papers
