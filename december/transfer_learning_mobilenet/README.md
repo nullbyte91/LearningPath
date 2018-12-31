@@ -1,4 +1,4 @@
-#Transfer-learning MobileNet
+# Transfer-learning MobileNet
 Transfer learning using the MobileNet pretrained network available in keras.applications which has been trained on the imagenet dataset.
 
 credits:
