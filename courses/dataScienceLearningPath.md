@@ -39,7 +39,7 @@ Sequence Modeling: Recurrent and Recursive Nets | To do
 Practical Methodology | To do 
 Applications | To do
 
-[Neural Networks and Deep Learning by Michael Nielsen](http://neuralnetworksanddeeplearning.com/index.html)
+## [Neural Networks and Deep Learning by Michael Nielsen](http://neuralnetworksanddeeplearning.com/index.html)
 
 ## Course's
 ### [Fast.ai Deep Learning 1](https://course.fast.ai/start.html)
