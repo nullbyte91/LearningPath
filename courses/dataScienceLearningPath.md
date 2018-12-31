@@ -54,6 +54,11 @@ Topic | Notes
 [Jupyter Notebook](https://github.com/fastai/numerical-linear-algebra/blob/master/README.md) | [My Notes](https://github.com/nullbyte91/LearningPath/tree/master/courses/fast.ai/computational_linear_algebra)
 [Video's](https://www.youtube.com/playlist?list=PLtmWHNX-gukIc92m1K0P6bIOnZb-mg0hY) | To do 
 
+### Python Libraries
+Topic | Notes
+:-- | :--:
+Numpy | [fast.ai student Jupyter notebook](https://github.com/jamesdietle/fastaipart1v2/blob/master/Tutorials/NumpyTutorial.ipynb)
+
 ### Research Papers
 [Cyclical Learning Rates](https://arxiv.org/abs/1506.01186)<br>
  Systematic method to find an optimal learning rate, which involves using a technique developed in the paper Cyclical Learning Rates for Training Neural Networks by Leslie Smith.
