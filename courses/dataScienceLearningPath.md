@@ -18,6 +18,9 @@ Topic | Notes
 [Gradient descent, how neural networks learn](https://www.youtube.com/watch?v=IHZwWFHWa-w&t=62s) | To do
 [What is backpropagation really doing?](https://www.youtube.com/watch?v=Ilg3gGewQ5U) | To do
 [Backpropagation calculus](https://www.youtube.com/watch?v=tIeHLnjs5U8)| To do
+[Essence of linear algebra](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)| To do
+[Essence of calculus](https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr)| To do
+
 
 ## Book's
 
