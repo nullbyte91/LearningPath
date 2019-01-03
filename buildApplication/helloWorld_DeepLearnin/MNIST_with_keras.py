@@ -14,6 +14,7 @@ import numpy as np
 import argparse
 import cv2
 import matplotlib.pyplot as plt
+from sklearn.model_selection import train_test_split
 
 def LeNet(numChannels, imgRows, imgCols, numClasses,
 		activation="relu", weightsPath=None):
@@ -114,12 +115,15 @@ testData = testData.astype("float32") / 255.0
 trainLabels = np_utils.to_categorical(trainLabels, 10)
 testLabels = np_utils.to_categorical(testLabels, 10)
 
+#Now we will split training data into training data and validation data
+trainData, validaData, trainLabels, validLabels = train_test_split(trainData, trainLabels, test_size = 0.1, random_state=42)
+
 # initialize the optimizer and model
 print("[INFO] compiling model...")
 opt = SGD(lr=0.01)
 model = LeNet(numChannels=1, imgRows=28, imgCols=28, numClasses=10)
 model.compile(loss="categorical_crossentropy", optimizer=opt, metrics=["accuracy"])
-history = model.fit(trainData, trainLabels, batch_size=128, epochs=20, verbose=1)
+history = model.fit(trainData, trainLabels, validation_data=(validaData, validLabels), batch_size=128, epochs=20, verbose=1)
 
 #Model testing
 testing(1)
@@ -127,10 +131,11 @@ testing(1)
 #Model evaluation
 #Loss plot
 loss = history.history['loss']
-acc = history.history['acc']
+val_loss = history.history['val_loss']
 epochs = range(1, len(loss) + 1)
 plt.plot(epochs, loss, color='red', label='Training loss')
-plt.title('Training loss')
+plt.plot(epochs, val_loss, color='green', label='Validation loss')
+plt.title('Training and validation loss')
 plt.xlabel('Epochs')
 plt.ylabel('Loss')
 plt.legend()
@@ -138,8 +143,10 @@ plt.show()
 
 #Accuracy Plot
 acc = history.history['acc']
+val_acc = history.history['val_acc']
 plt.plot(epochs, acc, color='red', label='Training acc')
-plt.title('Training accuracy')
+plt.plot(epochs, val_acc, color='green', label='Validation acc')
+plt.title('Training and validation accuracy')
 plt.xlabel('Epochs')
 plt.ylabel('Loss')
 plt.legend()
