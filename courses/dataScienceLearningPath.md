@@ -45,6 +45,13 @@ Applications | To do
 ## [Neural Networks and Deep Learning by Michael Nielsen](http://neuralnetworksanddeeplearning.com/index.html)
 
 ## Course's
+
+### [CS231n: Convolutional Neural Networks for Visual Recognition](http://cs231n.github.io/)
+Topic | Notes
+:-- | :--: 
+[Lession 1] | [myNotes](https://github.com/nullbyte91/LearningPath/tree/master/courses/cs231)
+[Lession 2] | [myNotes](https://github.com/nullbyte91/LearningPath/tree/master/courses/cs231)
+
 ### [Fast.ai Deep Learning 1](https://course.fast.ai/start.html)
 Topic | Notes
 :-- | :--: 
