@@ -126,7 +126,7 @@ model.compile(loss="categorical_crossentropy", optimizer=opt, metrics=["accuracy
 history = model.fit(trainData, trainLabels, validation_data=(validaData, validLabels), batch_size=128, epochs=20, verbose=1)
 
 #Model testing
-testing(1)
+#testing(1)
 
 #Model evaluation
 #Loss plot
@@ -151,3 +151,13 @@ plt.xlabel('Epochs')
 plt.ylabel('Loss')
 plt.legend()
 plt.show()
+
+#Prediction with valid dataset
+prediction=model.evaluate(validaData,validLabels)
+print("Val:accuaracy", str(prediction[1]*100))
+print("Val:Total loss",str(prediction[0]*100))
+
+#Evaluvating with test dataset
+prediction=model.evaluate(testData, testLabels)
+print("Test:accuaracy", str(prediction[1]*100))
+print("Test:Total loss",str(prediction[0]*100))
