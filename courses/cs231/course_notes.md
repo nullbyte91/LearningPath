@@ -1,11 +1,10 @@
-# 1. Course Introduction:
+# 1. Course Introduction
 [From Neuroscience To Computer Vision](https://towardsdatascience.com/from-neuroscience-to-computer-vision-e86a4dea3574)
-
 <b>To do:</b>
 Update Important Points
 
-# 2. Image classification: 
-<b>Data-Driven Approach</b>
+# Image Classification
+## 1. Data-Driven Approach
 1. Collect a dataset of images and labels
 2. Use Machine Learning to train a classifier
 3. Evaluate the classifier on new images
@@ -32,45 +31,12 @@ def predict(model, test_images):
   return test_labels
 ```
 
-## Nearest Neighbor Classifier
-```python
-import numpy as np
+## 2 . Nearest Neighbor Classifier
+The nearest neighbor classifier will take a test image, compare it to every single one of the training images, and predict the label of the closest training image. 
+![Basic Algebra elements](../images/nn.jpg)
 
-class NearestNeighbor(object):
-  def __init__(self):
-    pass
+Given two images and representing them as vectors I1,I2 , a reasonable choice for comparing them might be the L1 distance:
+$$ d1(I1,I2)= \sum_{p}|IP1 - IP2| $$
 
-  def train(self, X, y):
-    """ X is N x D where each row is an example. Y is 1-dimension of size N """
-    # the nearest neighbor classifier simply remembers all the training data
-    self.Xtr = X
-    self.ytr = y
-
-  def predict(self, X):
-    """ X is N x D where each row is an example we wish to predict label for """
-    num_test = X.shape[0]
-    # lets make sure that the output type matches the input type
-    Ypred = np.zeros(num_test, dtype = self.ytr.dtype)
-
-    # loop over all test rows
-    for i in xrange(num_test):
-      # find the nearest training image to the i'th test image
-      # using the L1 distance (sum of absolute value differences)
-      distances = np.sum(np.abs(self.Xtr - X[i,:]), axis = 1)
-      min_index = np.argmin(distances) # get the index with smallest distance
-      Ypred[i] = self.ytr[min_index] # predict the label of the nearest example
-
-    return Ypred
-
-Xtr, Ytr, Xte, Yte = load_CIFAR10('data/cifar10/') # a magic function we provide
-# flatten out all images to be one-dimensional
-Xtr_rows = Xtr.reshape(Xtr.shape[0], 32 * 32 * 3) # Xtr_rows becomes 50000 x 3072
-Xte_rows = Xte.reshape(Xte.shape[0], 32 * 32 * 3) # Xte_rows becomes 10000 x 3072
-
-nn = NearestNeighbor() # create a Nearest Neighbor classifier class
-nn.train(Xtr_rows, Ytr) # train the classifier on the training images and labels
-Yte_predict = nn.predict(Xte_rows) # predict labels on the test images
-# and now print the classification accuracy, which is the average number
-# of examples that are correctly predicted (i.e. label matches)
-print 'accuracy: %f' % ( np.mean(Yte_predict == Yte) )
-```
+Where the sum is taken over all pixels. Here is the procedure visualized:
+![Basic Algebra elements](../images/nneg.jpeg)
