@@ -55,7 +55,7 @@ Topic | Notes
 ### [Fast.ai Deep Learning 1](https://course.fast.ai/start.html)
 Topic | Notes
 :-- | :--: 
-[Lession 1](https://www.youtube.com/watch?v=IPBSB1HLNLo&feature=youtu.be) | To do 
+[Lession 1](https://www.youtube.com/watch?v=IPBSB1HLNLo&feature=youtu.be) | [myNotes](https://github.com/nullbyte91/LearningPath/tree/master/courses/fast.ai/deepLearning1) 
 [Lession 2](https://www.youtube.com/watch?v=JNxcznsrRb8&feature=youtu.be) | To do 
 [Lession 3](https://www.youtube.com/watch?v=9C06ZPF8Uuc&feature=youtu.be) | To do
 [Lession 4](https://www.youtube.com/watch?v=gbceqO8PpBg&feature=youtu.be) | To do
