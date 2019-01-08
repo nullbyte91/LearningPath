@@ -21,29 +21,6 @@ Topic | Notes
 [Essence of linear algebra](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)| To do
 [Essence of calculus](https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr)| To do
 
-
-## Book's
-
-### [MIT Deep Learning by Ian Goodfellow, Yoshua Bengio and Aaron Courville](https://github.com/janishar/mit-deep-learning-book-pdf/tree/master/complete-book-bookmarked-pdf)
-
-Topic | Notes
-:-- | :--: 
-Applied Math and Machine Learning Basics | 
-Linear Algebra | To do 
-Probability and Information Theory | To do 
-Numerical Computation | To do 
-Machine Learning Basics | To do 
-Deep Networks: Modern Practices | 
-Deep Feedforward Networks | To do 
-Regularization for Deep Learning | To do 
-Optimization for Training Deep Models | To do 
-Convolutional Networks | To do
-Sequence Modeling: Recurrent and Recursive Nets | To do 
-Practical Methodology | To do 
-Applications | To do
-
-## [Neural Networks and Deep Learning by Michael Nielsen](http://neuralnetworksanddeeplearning.com/index.html)
-
 ## Course's
 
 ### [CS231n: Convolutional Neural Networks for Visual Recognition](http://cs231n.github.io/)
@@ -69,6 +46,28 @@ Topic | Notes
 :-- | :--: 
 [Jupyter Notebook](https://github.com/fastai/numerical-linear-algebra/blob/master/README.md) | [My Notes](https://github.com/nullbyte91/LearningPath/tree/master/courses/fast.ai/computational_linear_algebra)
 [Video's](https://www.youtube.com/playlist?list=PLtmWHNX-gukIc92m1K0P6bIOnZb-mg0hY) | To do 
+
+## Book's
+
+### [MIT Deep Learning by Ian Goodfellow, Yoshua Bengio and Aaron Courville](https://github.com/janishar/mit-deep-learning-book-pdf/tree/master/complete-book-bookmarked-pdf)
+
+Topic | Notes
+:-- | :--: 
+Applied Math and Machine Learning Basics | 
+Linear Algebra | To do 
+Probability and Information Theory | To do 
+Numerical Computation | To do 
+Machine Learning Basics | To do 
+Deep Networks: Modern Practices | 
+Deep Feedforward Networks | To do 
+Regularization for Deep Learning | To do 
+Optimization for Training Deep Models | To do 
+Convolutional Networks | To do
+Sequence Modeling: Recurrent and Recursive Nets | To do 
+Practical Methodology | To do 
+Applications | To do
+
+## [Neural Networks and Deep Learning by Michael Nielsen](http://neuralnetworksanddeeplearning.com/index.html)
 
 ## Python Librarie's
 Topic | Notes
