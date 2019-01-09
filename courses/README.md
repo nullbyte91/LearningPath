@@ -28,6 +28,7 @@ Topic | Notes
 :-- | :--: 
 [Lession 1] | [myNotes](https://github.com/nullbyte91/LearningPath/tree/master/courses/cs231)
 [Lession 2] | [myNotes](https://github.com/nullbyte91/LearningPath/tree/master/courses/cs231)
+[Lession 3] | [myNotes](https://github.com/nullbyte91/LearningPath/tree/master/courses/cs231)
 
 ### [Fast.ai Deep Learning 1](https://course.fast.ai/start.html)
 Topic | Notes
