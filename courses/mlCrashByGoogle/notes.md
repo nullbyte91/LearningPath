@@ -117,3 +117,65 @@ Where,
 * prediction(x) is a function of the weights and bias in combination with the set of features x.
 * D is a data set containing many labeled examples, which are(x, y) pairs.
 * N is the number of examples in D.
+
+## 4. Reducing the Loss:
+
+![GradientDescentDiagram](images/GradientDescentDiagram.svg)
+
+The "model" takes one or more features as input and returns one prediction (y') as output. To simplify, consider a model that takes one feature and returns one prediction:
+
+$$ y' = b + w_1x_1 $$
+
+The "Compute Loss" part of the diagram is the loss function that the model will use. Suppose we use the squared loss function. The loss function takes in two input values:
+* y': The model's prediction for features x.
+* y: The correct label corresponding to features x.
+
+**A Machine Learning model is trained by starting with an initial guess for the weights and bias and iteratively adjusting those guesses until learning the weights and bias with the lowest possible loss.**
+
+### Reducing Loss: Gradient Descent:
+![convex](images/convex.svg)
+
+The first stage in gradient descent is to pick a starting value (a starting point) for w1. The starting point doesn't matter much; therefore, many algorithms simply set w1 to 0 or pick a random value. The following figure shows that we've picked a starting point slightly greater than 0:
+
+![convex](images/GradientDescentStartingPoint.svg)
+
+The gradient is a vector, so it has both of the following characteristics:
+* a direction
+* a magnitude
+
+The gradient always points in the direction of steepest increase in the loss function. The gradient descent algorithm takes a step in the direction of the negative gradient in order to reduce loss as quickly as possible.
+
+![GradientDescentNegativeGradient](images/GradientDescentNegativeGradient.svg)
+
+To determine the next point along the loss function curve, the gradient descent algorithm adds some fraction of the gradient's magnitude to the starting point as shown in the following figure:
+
+![GradientDescentGradientStep](images/GradientDescentGradientStep.svg)
+
+**The gradient descent then repeats this process, edging ever closer to the minimum.**
+
+---
+**Note:** When performing gradient descent, we generalize the above process to tune all the model parameters simultaneously. For example, to find the optimal values of both w1 and the bias b, we calculate the gradients with respect to both w1 and b. Next, we modify the values of w1 and b based on their respective gradients. Then we repeat these steps until we reach minimum loss.
+
+---
+### Reducing Loss: Learning Rate:
+As noted, the gradient vector has both a direction and a magnitude. Gradient descent algorithms multiply the gradient by a scalar known as the learning rate (also sometimes called step size) to determine the next point. For example, if the gradient magnitude is 2.5 and the learning rate is 0.01, then the gradient descent algorithm will pick the next point 0.025 away from the previous point.
+
+![LearningRateTooSmall](images/LearningRateTooSmall.svg)
+
+![LearningRateTooLarge](images/LearningRateTooLarge.svg)
+
+![LearningRateJustRight](images/LearningRateJustRight.svg)
+
+**Epoch vs Batch Size vs Iterations**
+**Epoch:**
+One Epoch is when an ENTIRE dataset is passed forward and backward through the neural network only ONCE.
+
+**Batch Size:**
+Total number of training examples present in a single batch. We can’t pass the entire dataset into the neural net at once. So, you divide dataset into Number of Batches or sets or parts.
+
+**Iterations:**
+Iterations is the number of batches needed to complete one epoch.
+
+For example,
+We can divide the dataset of 2000 examples into batches of 500 then it will take a 4 iterations to complete 1 epoch.
+
