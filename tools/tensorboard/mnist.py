@@ -60,126 +60,14 @@ def cnn_model_fn(features, labels, mode):
   # Output Tensor Shape: [batch_size, 14, 14, 32]
   pool1 = tf.layers.max_pooling2d(inputs=conv1, pool_size=[2, 2], strides=2)
 
-  # Convolutionalif __name__ == "__main__":
-    parser = argparse.ArgumentParser()
-    parser.add_argument(
-      '--data_dir',
-      type=str,
-      default=os.path.join(os.getenv('TEST_TMPDIR', '/tmp'),
-                           'tensorflow/mnist/input_data'),
-      help='Directory for storing input data')
-    parser.add_argument(
-      '--log_dir',
-      type=str,
-      default=os.path.join(os.getenv('TEST_TMPDIR', '/tmp'),
-                           'tensorflow/mnist/logs/mnist_with_summaries'),
-      help='Summaries log directory')
-    FLAGS, unparsed = parser.parse_known_args()  
-  # Computes 64 fif __name__ == "__main__":
-    parser = argparse.ArgumentParser()
-    parser.add_argument(
-      '--data_dir',
-      type=str,
-      default=os.path.join(os.getenv('TEST_TMPDIR', '/tmp'),
-                           'tensorflow/mnist/input_data'),
-      help='Directory for storing input data')
-    parser.add_argument(
-      '--log_dir',
-      type=str,
-      default=os.path.join(os.getenv('TEST_TMPDIR', '/tmp'),
-                           'tensorflow/mnist/logs/mnist_with_summaries'),
-      help='Summaries log directory')
-    FLAGS, unparsed = parser.parse_known_args()  
-  # Padding is adif __name__ == "__main__":
-    parser = argparse.ArgumentParser()
-    parser.add_argument(
-      '--data_dir',
-      type=str,
-      default=os.path.join(os.getenv('TEST_TMPDIR', '/tmp'),
-                           'tensorflow/mnist/input_data'),
-      help='Directory for storing input data')
-    parser.add_argument(
-      '--log_dir',
-      type=str,
-      default=os.path.join(os.getenv('TEST_TMPDIR', '/tmp'),
-                           'tensorflow/mnist/logs/mnist_with_summaries'),
-      help='Summaries log directory')
-    FLAGS, unparsed = parser.parse_known_args()  
-  # Input Tensor if __name__ == "__main__":
-    parser = argparse.ArgumentParser()
-    parser.add_argument(
-      '--data_dir',
-      type=str,
-      default=os.path.join(os.getenv('TEST_TMPDIR', '/tmp'),
-                           'tensorflow/mnist/input_data'),
-      help='Directory for storing input data')
-    parser.add_argument(
-      '--log_dir',
-      type=str,
-      default=os.path.join(os.getenv('TEST_TMPDIR', '/tmp'),
-                           'tensorflow/mnist/logs/mnist_with_summaries'),
-      help='Summaries log directory')
-    FLAGS, unparsed = parser.parse_known_args()  
-  # Output Tensorif __name__ == "__main__":
-    parser = argparse.ArgumentParser()
-    parser.add_argument(
-      '--data_dir',
-      type=str,
-      default=os.path.join(os.getenv('TEST_TMPDIR', '/tmp'),
-                           'tensorflow/mnist/input_data'),
-      help='Directory for storing input data')
-    parser.add_argument(
-      '--log_dir',
-      type=str,
-      default=os.path.join(os.getenv('TEST_TMPDIR', '/tmp'),
-                           'tensorflow/mnist/logs/mnist_with_summaries'),
-      help='Summaries log directory')
-    FLAGS, unparsed = parser.parse_known_args()  
-  conv2 = tf.layeif __name__ == "__main__":
-    parser = argparse.ArgumentParser()
-    parser.add_argument(
-      '--data_dir',
-      type=str,
-      default=os.path.join(os.getenv('TEST_TMPDIR', '/tmp'),
-                           'tensorflow/mnist/input_data'),
-      help='Directory for storing input data')
-    parser.add_argument(
-      '--log_dir',
-      type=str,
-      default=os.path.join(os.getenv('TEST_TMPDIR', '/tmp'),
-                           'tensorflow/mnist/logs/mnist_with_summaries'),
-      help='Summaries log directory')
-    FLAGS, unparsed = parser.parse_known_args()  
-      inputs=poolif __name__ == "__main__":
-    parser = argparse.ArgumentParser()
-    parser.add_argument(
-      '--data_dir',
-      type=str,
-      default=os.path.join(os.getenv('TEST_TMPDIR', '/tmp'),
-                           'tensorflow/mnist/input_data'),
-      help='Directory for storing input data')
-    parser.add_argument(
-      '--log_dir',
-      type=str,
-      default=os.path.join(os.getenv('TEST_TMPDIR', '/tmp'),
-                           'tensorflow/mnist/logs/mnist_with_summaries'),
-      help='Summaries log directory')
-    FLAGS, unparsed = parser.parse_known_args()  
-      filters=64,if __name__ == "__main__":
-    parser = argparse.ArgumentParser()
-    parser.add_argument(
-      '--data_dir',
-      type=str,
-      default=os.path.join(os.getenv('TEST_TMPDIR', '/tmp'),
-                           'tensorflow/mnist/input_data'),
-      help='Directory for storing input data')
-    parser.add_argument(
-      '--log_dir',
-      type=str,
-      default=os.path.join(os.getenv('TEST_TMPDIR', '/tmp'),
-                           'tensorflow/mnist/logs/mnist_with_summaries'),
-      help='Summaries log directory')
-    FLAGS, unparsed = parser.parse_known_args()  
+  # Convolutional Layer #2
+  # Computes 64 features using a 5x5 filter.
+  # Padding is added to preserve width and height.
+  # Input Tensor Shape: [batch_size, 14, 14, 32]
+  # Output Tensor Shape: [batch_size, 14, 14, 64]
+  conv2 = tf.layers.conv2d(
+      inputs=pool1,
+      filters=64,
       kernel_size=[5, 5],
       padding="same",
       activation=tf.nn.relu)
@@ -212,7 +100,6 @@ def cnn_model_fn(features, labels, mode):
    
   merged = tf.summary.merge_all()
   train_writer = tf.summary.FileWriter(FLAGS.log_dir + '/train', sess.graph)
-  
   predictions = {
       # Generate predictions (for PREDICT and EVAL mode)
       "classes": tf.argmax(input=logits, axis=1),
