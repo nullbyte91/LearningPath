@@ -4,6 +4,7 @@
 ## Blog post's
 Topic | Link
 :-- | :--:
+A Beginner's Guide To Understanding Convolutional Neural Networks | [Link](https://adeshpande3.github.io/adeshpande3.github.io/A-Beginner's-Guide-To-Understanding-Convolutional-Neural-Networks/)
 Image Kernels explained visually | [Link](http://setosa.io/ev/image-kernels/)
 Machine Learning For Humans | [Medium Post](https://medium.com/machine-learning-for-humans)
 Implement Gradient Descent in Python | [Towardsdatascience post](https://towardsdatascience.com/implement-gradient-descent-in-python-9b93ed7108d1)
